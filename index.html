@@ -74,6 +74,47 @@
             text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
         }
 
+        /* Profile Image Section */
+        .profile-section {
+            margin: 30px 0;
+            animation: slideUp 1.5s ease-out;
+        }
+
+        .profile-image-container {
+            width: 200px;
+            height: 200px;
+            margin: 0 auto 20px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 5px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            position: relative;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .profile-image-container:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        .profile-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .profile-image-container:hover .profile-image {
+            transform: scale(1.1);
+        }
+
+        .profile-name {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-top: 15px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        }
+
         .birthday-card {
             background: rgba(255, 255, 255, 0.15);
             backdrop-filter: blur(10px);
@@ -105,7 +146,6 @@
         .cake-container {
             margin: 30px 0;
             position: relative;
-            /* height: 200px; */
         }
 
         .cake {
@@ -365,6 +405,11 @@
                 font-size: 1rem;
             }
 
+            .profile-image-container {
+                width: 150px;
+                height: 150px;
+            }
+
             .cake {
                 transform: scale(0.8);
             }
@@ -405,6 +450,15 @@
             <div class="subtitle">Chamil Kasun Sir</div>
         </div>
 
+        <!-- Profile Image Section -->
+        <div class="profile-section">
+            <div class="profile-image-container">
+                <!-- Replace with actual image path -->
+                <img src="572521063_3142950852541364_6791978206542562766_n.jpg" alt="Chamil Kasun Sir" class="profile-image">
+            </div>
+            <div class="profile-name">Chamil Kasun Sir</div>
+        </div>
+
         <div class="birthday-card">
             <p class="message">
                 Dear Chamil Kasun Sir,<br><br>
@@ -418,11 +472,6 @@
                 Wishing you a year ahead filled with success, good health, and happiness.
                 Thank you for being such an amazing teacher!
             </div>
-
-            <!-- <p class="message">
-                Wishing you a year ahead filled with success, good health, and happiness.
-                Thank you for being such an amazing teacher!
-            </p> -->
         </div>
 
         <div class="cake-container">
@@ -434,14 +483,6 @@
                 <div class="flame"></div>
             </div>
         </div>
-
-        <!-- <div class="balloons">
-            <div class="balloon"></div>
-            <div class="balloon"></div>
-            <div class="balloon"></div>
-            <div class="balloon"></div>
-            <div class="balloon"></div>
-        </div> -->
 
         <button class="wishes-btn" id="wishesBtn">Click for Special Wishes!</button>
 
